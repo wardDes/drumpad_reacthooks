@@ -146,10 +146,10 @@ const App = props =>  {
 
   const adjustVolume = (e) => {
     if(state.power){
-      setState({...state, sliderVal: e.target.Value})
+      setState({...state,  sliderVal: e.target.Value})
       setState({
         ...state,
-        display:`Volume: ${Math.round(e.target.Value * 100)}`
+        display: "Volume: " + Math.round(e.target.Value * 100)
       })
     setTimeout(() => clearDisplay(), 1000)
     }
@@ -181,7 +181,7 @@ const App = props =>  {
         clipVolume={state.sliderVal}
         currentPadBank={state.currentPadBank}
       />
-
+      
       <div className="logo">
         <div className="inner-logo">{`FCC ${String.fromCharCode(160)}`}</div>
         <i className="inner-logo fa fa-free-code-camp" />
@@ -192,7 +192,7 @@ const App = props =>  {
         <div className="control">
           <p>Power</p>
           <div onClick={powerControl} className="select">
-            <div style={powerSlider} classNamme="inner" />
+            <div style={powerSlider} className="inner" />
           </div>
         </div>
         <p id="display">

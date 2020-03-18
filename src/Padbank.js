@@ -9,6 +9,7 @@ const Padbank = props => {
         padBank = props.currentPadBank.map((drumObj, i , padBankArr) => {
             return (
                 <DrumPad
+                    key={padBankArr[i].id}
                     clipId = {padBankArr[i].id}
                     clip={padBankArr[i].url}
                     keyTrigger={padBankArr[i].keyTrigger}
